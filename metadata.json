@@ -1,11 +1,11 @@
 {
-    "name":"resun",
+    "name":"Resun",
     "thumbnail":"resun.png",
     "screenshot":"resun.png",
     "templateType":"general",
     "pageTypes":["default","home"],
     "tags": {
-        "en": ["Business", "Trade", "company", "business", "simple", "builder", "building site"]        
+        "en": ["Business", "Trade", "company", "business", "corporate", "building", "buildingsite", "firm", "money", "simple"]        
     },
     "colorSwatches":
     {
