@@ -1,0 +1,43 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header">
+    <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+          {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+          {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        <div class="menu-sz">
+          {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+        </div>        
+    </div>
+</header>
+
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+    
+</div>  
+
+<footer class="bk-footer sz-footer">
+   <div class="wrapper clearfix sz-footer-inner">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left f-copyright">
+              <div class="row f-phone">
+                {{widget('profile', 'f-phone', { 'profileType':'phone', 'phone':'profile'})|raw}}                            
+              </div>
+              <div class="row f-mail">
+                  {{widget('profile', 'f-mail', { 'profileType':'email', 'email':'profile'})|raw}}
+              </div>
+              <div class="row f-address">
+                  {{widget('profile', 'f-address', { 'profileType':'address', 'address':'profile'})|raw}}
+              </div>
+            </div>
+            <div class="column columns-two-right f-socialicons">
+                {{widget('profile', 'f-socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
