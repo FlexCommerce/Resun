@@ -1,52 +1,40 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
+
 body {
-  background: @color-swatch1;
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmOThmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  @color-swatch7 0%, @color-swatch1 15%, @color-swatch1 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color-swatch7), color-stop(15%,@color-swatch1), color-stop(100%,@color-swatch1));
-background: -webkit-linear-gradient(top,  @color-swatch7 0%,@color-swatch1 15%,@color-swatch1 100%);
-background: -o-linear-gradient(top,  @color-swatch7 0%,@color-swatch1 15%,@color-swatch1 100%);
-background: -ms-linear-gradient(top,  @color-swatch7 0%,@color-swatch1 15%,@color-swatch1 100%);
-background: linear-gradient(to bottom,  @color-swatch7 0%,@color-swatch1 15%,@color-swatch1 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color-swatch7', endColorstr='@color-swatch1',GradientType=0 );
+  background-color: @color-swatch1;
   margin: 0;
   padding: 0;
-  color: @color-swatch3;
 }
 
-/* ===============================
-   CUSTOM CSS 
-   =============================== */
-a{
-  color: @color-swatch3;
-  text-decoration: underline;
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
 }
-a:hover{
-  color: @color-swatch4;
+
+.canvas  {
+  background-color: @color-swatch1;
+  max-width: 1080px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 0 60px;
 }
 pre{
-  border: 1px dashed @color-swatch7;
+  border: 1px solid @color-swatch6;
   padding: 1em;
   margin: 1em 0;
 }
-blockquote, pre, code,
-ul, ol, li{
-  text-align: left;
-}
-blockquote{
-  margin: 1em 0;
-}
+/* ===============================
+   CUSTOM CSS 
+   =============================== */
+
 .main {
-  padding: 1em 0;
-  background-color: @color-swatch1;
-}
-h1, h2, h3{
-  font-weight: bold;
+  padding: 40px 0;
 }
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
  overflow: visible;
 }
+
 /* ===============================
    PROFILE WIDGET
    =============================== */
@@ -64,12 +52,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .widget.profile a {
     color: @color-swatch3;
 }
-.bk-footer .widget.profile span,
-.bk-footer .widget.profile a{
-  color: @color-swatch1;
-}
+
 .widget.profile a:hover {
-    color: @color-swatch4;
+    color: lighten(@color-swatch3,15%);
     text-decoration: none;
 }
 
@@ -78,7 +63,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
 .widget.profile .twitter a {
-   color: @color-swatch1;
+   color: @color-swatch4;
    font-size:@font-swatch5-font-size;
    text-decoration: none;
 }
@@ -147,31 +132,34 @@ footer.bk-footer .widget.profile .twitter span {
     width: 100%;
     float: left;
     font-family: @font-swatch5-font-family;
-    color: @color-swatch3;
+    color: @color-swatch4;
     line-height:@font-swatch5-line-height;
     letter-spacing: @font-swatch4-letter-spacing;
 }
-.widget.profile form fieldset input,
+
 .widget.profile fieldset input {
     height: 40px;
     width: 73%;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
-    color: @color-swatch3;
+  color: @color-swatch2;
     text-indent: 8px;
     margin-top: 6px;
     margin-bottom: 30px;
     padding: 0;
     float:left;
+    -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 .signupform fieldset button,
 .widget.profile fieldset button.btn {
     width: 25%;
     height: 40px;
-    padding: 0;
+    padding: 0px;
     margin-top: 6px;
-    margin-left: 0;
-    border: 0;
+    margin-left: 5px;
+    border: 1px solid transparent;
     font-family: @font-swatch7-font-family;
     font-size: @font-swatch7-font-size;
     font-weight:@font-swatch7-font-weight;
@@ -180,16 +168,22 @@ footer.bk-footer .widget.profile .twitter span {
     text-decoration: none;
     letter-spacing: 1px;
     text-shadow: none;
-}
-.signupform fieldset button{
-  margin-top: 0;
+    -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 0px @color-swatch5;
+  -moz-box-shadow: 0 2px 0px @color-swatch5;
+  box-shadow: 0 2px 0px @color-swatch5;
 }
 .signupform fieldset button:hover,
 .widget.profile fieldset button.btn:hover {
-    background-color: @color-swatch6;
+    background-color: @color-swatch1;
     cursor: pointer;
-    border: 0;
-    color: @color-swatch1;
+    border: 1px solid @color-swatch4;
+    color: @color-swatch4;
+  -webkit-box-shadow: 0 0 0px @color-swatch5;
+  -moz-box-shadow: 0 0 0px @color-swatch5;
+  box-shadow: 0 0 0px @color-swatch5;
 }
 
 
@@ -198,20 +192,14 @@ footer.bk-footer .widget.profile .twitter span {
    =============================== */
 
 header.bk-header {
-  padding: 2em 0 0;
-}
-header.bk-header .wrapper{
   padding: 0;
+  background-color: @color-swatch1;
 }
+
 .companyheader {
   display: block;
   float: left;
-  padding: 0 1em;
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  max-height: 90px;
-  background-color: @color-swatch4;
+  padding: 11px 0px 7px
 }
 
 /* COMPANY NAME */
@@ -219,10 +207,9 @@ header.bk-header .wrapper{
 .widget.companyname {
   display: block;
   float: left;
-  margin-top: 10px;  
+  margin-top: 10px;
   a {
     font-size: @font-swatch10-font-size;
-    color: @color-swatch3;
     @media @mobile {
       font-size: bkscale(@font-swatch10-font-size, 1);
     }
@@ -234,45 +221,77 @@ header.bk-header .wrapper{
   padding: 0;
   letter-spacing: -1px;
 }
+
 /* LOGO */
 
 .widget.logo {
   display: table;
-  margin: 0 auto;
-  float: left;
-  img{
-    max-height: 90px;
-  }
+  margin: 10px auto;
 }
-/* MENU */
-
-.menu-sz{
-  margin: 0;
+.logo-wrap{
+  border-bottom: 1px solid #d4d0c5;
+}
+/* ===============================
+   FOOTER
+   =============================== */
+.copy-sz{
+  background-color: @color-swatch6;
+  padding: 1em 0;
+}
+.copy-sz #f-socialicons{
   float: right;
-  width: 100%;
-  background-color: @color-swatch4;
-  -moz-box-shadow: 0 3px 5px lighten(@color-swatch3, 40%);
-  -webkit-box-shadow: 0 3px 5px lighten(@color-swatch3, 40%);
-  box-shadow: 0 3px 5px lighten(@color-swatch3, 40%);
-  .extendednavigation{
-    ul{
-      li{
-        
-        a{
-        }
-      }
-    }
-  }
+}
+footer.bk-footer {
+  padding: 4em 0;
+  background-color: @color-swatch6;
+  min-height: 150px;
+  color: @color-swatch4;
+}
+footer.bk-footer h1{
+  font-weight: normal;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+footer.bk-footer h2 {
+  color: @color-swatch4;
+  font-size:bkscale(@font-swatch2-font-size, 0.9);
+  padding-bottom: 10px;
+}
+
+footer.bk-footer p {
+  font-family: @font-swatch5-font-family;
+  color: @color-swatch4;
+  line-height:@font-swatch5-line-height;
+  padding-bottom: 20px;
+}
+
+footer.bk-footer span {
+  color: @color-swatch4;
+}
+.sz-foot-right #f-address, .sz-foot-right #page-zones__template-widgets__profile-f-address{
+  margin-top: 185px;
+}
+.bk-footer #f-address, #page-zones__template-widgets__profile-f-address{
+  padding: 10px 10px 10px 50px;
+  background-image: image('/images/addres.png');
+  background-position: 20px 50%;
+  background-repeat: no-repeat;
+}
+.bk-footer #f-phone, #page-zones__template-widgets__profile-f-phone{
+  padding: 10px 10px 10px 50px;
+  background-image: image('/images/tel.png');
+  background-position: 20px 50%;
+  background-repeat: no-repeat;
+}
+.bk-footer #f-mail, #page-zones__template-widgets__profile-f-mail{
+  padding: 10px 10px 10px 50px;
+  background-image: image('/images/mail.png');
+  background-position: 20px 50%;
+  background-repeat: no-repeat;
 }
 /* ===============================
    EXTENDED NAVIGATION
    =============================== */
-.sz-nav{
- 
-}
-.widget.extendednavigation {
-  float: right;
-}
 
 .widget.extendednavigation ul {
   margin: 0;
@@ -281,35 +300,34 @@ header.bk-header .wrapper{
   float: none;
 }
 
+
 .widget.extendednavigation ul li {
-  float: none;
   display: inline-block;
+  float: none;
 }
 
 .widget.extendednavigation ul li.folder {
     &:hover {
-        background-color: transparent;
+        background-color: @color-swatch2;
     }
 }
 .widget .extendednavigation ul li.folder:after{
-      border-top-color: darken(@color-swatch7, 10%);
+      border-top-color: @color-swatch2;
 }
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
   padding: 10px 25px;
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch4-font-size;
-  font-weight: @font-swatch4-font-weight;
-  color: @font-swatch4-color;
-  line-height:@font-swatch4-line-height;
-  letter-spacing: @font-swatch4-letter-spacing;
-  text-decoration: none;
+  font-family:@font-swatch6-font-family;
+  font-size:@font-swatch6-font-size;
+  font-weight: @font-swatch6-font-weight;
+  color: @font-swatch6-color;
+  line-height:@font-swatch6-line-height;
+  letter-spacing: @font-swatch6-letter-spacing;
 }
-.widget.extendednavigation ul ul li a, .widget.extendednavigation ul ul li.folder .text{
-  padding: 0px 25px;
-}
+
 .widget.extendednavigation ul li a:hover {
   text-decoration: none;
   color: @color-swatch1;
+  background-color: @color-swatch2;
 }
 
 /* SELECTED */
@@ -343,7 +361,7 @@ header.bk-header .wrapper{
   background-color: @color-swatch2;
   padding: 0;
 }
-.widget.extendednavigation ul li:hover ul li:hover,
+
 .widget.extendednavigation ul li:hover ul li a span.text:hover {
     background-color: @color-swatch4;
 }
@@ -357,65 +375,6 @@ header.bk-header .wrapper{
   box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
-
-/* ===============================
-   FOOTER
-   =============================== */
-.copy-sz{
-  background-color: @color-swatch5;
-  float: right;
-  max-width: 700px;
-}
-.copy-sz #f-socialicons{
-  float: right;
-}
-.sz-footer{
-  background-color: @color-swatch3;
-  padding: 1em 0;
-  color: @color-swatch1;
-}
-.sz-footer a, .sz-footer p, .sz-footer span, .sz-footer .widget.profile span, .sz-footer .widget.profile a{
-  color: @color-swatch1;
-}
-.sz-footer-inner{
-  padding: 1em 0;
-}
-footer.bk-footer h1{
-  font-weight: normal;
-  font-weight: 300;
-  padding-bottom: 10px;
-}
-footer.bk-footer h2 {
-  color: @color-swatch1;
-  font-size: @font-swatch2-font-size;
-  padding-bottom: 10px;
-}
-
-footer.bk-footer p {
-  font-family: @font-swatch5-font-family;
-  color: @color-swatch1;
-  line-height:@font-swatch5-line-height;
-  padding-bottom: 20px;
-}
-
-footer.bk-footer span {
-  color: @color-swatch1;
-}
-.bk-footer h1, .bk-footer h2, .bk-footer h3, .bk-footer h4 {
-  color: @color-swatch1;
-  text-align: center;
-}
-#f-copyright, #page-zones__template-widgets__profile-f-copyright{
-  color: @color-swatch1;
-}
-.f-socialicons{
-  text-align: right;
-}
-.sz-footer .widget.socialicons span a, .sz-footer .widget.profile .bk-profile-socialicons span a{
-  background-color: @color-swatch1;
-  border-radius: 4px;
-  text-align: left;
-}
 /* ===============================
    FEATURE
    =============================== */
@@ -431,6 +390,7 @@ footer.bk-footer span {
 
 .widget.feature .content {
   height: 500px;
+  text-align: right;
 }
 
 .widget.feature .content .spare {
@@ -442,12 +402,10 @@ footer.bk-footer span {
 /* FEATURE TITLE */
 
 .widget.feature h2 {
-  display: block;
   font-family:@font-swatch8-font-family;
   font-size:@font-swatch8-font-size;
   font-weight: @font-swatch8-font-weight;
   line-height:@font-swatch8-line-height;
-  font-style: normal;
   color: @font-swatch8-color;
   letter-spacing: 1px;
   padding-bottom: 0;
@@ -457,7 +415,6 @@ footer.bk-footer span {
 /* FEATURE STRAPLINE */
 
 .widget.feature h3 {
-  display: block;
   font-family:@font-swatch9-font-family;
   font-size:@font-swatch9-font-size;
   font-weight: @font-swatch9-font-weight;
@@ -471,38 +428,77 @@ footer.bk-footer span {
 .widget.feature .feature-btn{
   display: block;
 }
-
-.widget.feature button{
+.widget.feature button
+{
   margin: 1em 0;
   padding: 5px 30px;
-  border: 1px solid @color-swatch5;
-  font-family: @font-swatch7-font-family;
+  border: 1px solid transparent;
+  font-family: @font-swatch2-font-family;
   font-size: 1em;
   font-weight:@font-swatch7-font-weight;
   background-color: @font-swatch7-background-color;
-  color: @color-swatch1;  
+  color: @font-swatch7-color;
   text-decoration: none;
-  
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 0px @color-swatch5;
+  -moz-box-shadow: 0 2px 0px @color-swatch5;
+  box-shadow: 0 2px 0px @color-swatch5;
 }
-.widget.feature .feature-bgimg .content{
-  vertical-align: top;
-}
-.widget.feature .feature-bgimg .content button{
-  border: 0px solid @color-swatch5;
-  text-transform: uppercase;
-}
-.widget.feature button:hover {
-  background-color: @font-swatch7-background-color-hover;
+
+.widget.feature button:hover 
+{
+  background-color: @color-swatch1;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
+  background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
-  border: 0px solid @color-swatch6;
-  color: @color-swatch1;
+  border: 1px solid @color-swatch4;
+  color: @color-swatch4;
+  -webkit-box-shadow: 0 0 0px @color-swatch5;
+  -moz-box-shadow: 0 0 0px @color-swatch5;
+  box-shadow: 0 0 0px @color-swatch5;
 }
 
+.widget.feature button.btn.justifyleft
+{
+    text-align: left;
+}
+
+.widget.feature button.btn.justifycenter
+{
+    text-align: center;
+}
+
+.widget.feature button.btn.justifyright
+{
+    text-align: right;
+}
+
+.widget.feature button.btn.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.feature button.btn.italic {
+    font-style: italic;
+}
+
+.widget.feature button.btn.bold {
+    font-weight: bold;
+}
+
+.widget.feature button span {
+    vertical-align: center;
+}
+
+.widget.feature button i {
+    margin-right: 5px;
+}
 
 /* ===============================
    FEATURE LAYOUTS
@@ -571,37 +567,49 @@ footer.bk-footer span {
 
 .widget.button {
     padding: 0;
+    -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
-.widget.dropbox button, .widget.tweet a, .widget.clicktocall a, .widget.clicktocall a{
+.widget.dropbox button, .widget.tweet a, .widget.clicktocall a{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   line-height: 24px;
   padding: 10px 10px 10px 40px;
-}
-.widget.tweet a, .widget.clicktocall a, .widget.clicktocall a:hover{
-  padding: 14px 10px 13px 40px;
 }
 .widget.button button{
   margin: 1em 0;
   padding: 5px 30px;
-  border: 0px solid transparent;
+  border: 1px solid transparent;
   font-family: @font-swatch2-font-family;
   font-size: 1em;
   font-weight:@font-swatch7-font-weight;
   background-color: @font-swatch7-background-color;
   color: @font-swatch7-color;
   text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 0px @color-swatch5;
+  -moz-box-shadow: 0 2px 0px @color-swatch5;
+  box-shadow: 0 2px 0px @color-swatch5;
 }
 
 .widget.button button:hover {
-  background-color: @font-swatch7-background-color-hover;
+  background-color: @color-swatch1;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
   cursor: pointer;
-  border: 0px solid @color-swatch4;
-  color: @color-swatch1;
+  border: 1px solid @color-swatch4;
+  color: @color-swatch4;
+  -webkit-box-shadow: 0 0 0px @color-swatch5;
+  -moz-box-shadow: 0 0 0px @color-swatch5;
+  box-shadow: 0 0 0px @color-swatch5
 } 
 
 /* ===============================
@@ -812,14 +820,12 @@ footer.bk-footer span {
 }
 
 hr.line {
-   background-color: @color-swatch7;
+   background-color: lighten(@color-swatch5,18%);
    height: 1px;
    width: 100%;
    border: none;
 }
-.bk-footer hr.line{
-  background-color: @color-swatch1;
-}
+
 hr.line.align-left {
    margin: 20px auto 20px 0px;
 }
@@ -838,6 +844,29 @@ hr.line.align-right {
 
 .widget.redirecttodesktop {
     padding: 8px 0;
+}
+
+.widget.redirecttodesktop a {
+    padding-right: 30px;
+    padding-top: 2px;
+    background-image: image('/images/desktop.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-decoration: none;
+    cursor: pointer;
+    color: @font-swatch5-color;
+    font-family: @font-swatch5-font-family;
+
+}
+
+.widget.redirecttodesktop a:hover, .desktop a:active {
+    background-image: image('/images/desktop.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /* ===============================
@@ -925,6 +954,9 @@ hr.line.align-right {
   max-width: 400px;
   background-color: @color-swatch1;
   border: 1px solid darken(@color-swatch1,10%);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   @media @mobile {
     padding: 20px;
   }
@@ -940,15 +972,18 @@ hr.line.align-right {
     float: left;
     width: 100%;
     margin-bottom: 4px;
-    color: @color-swatch6;
+    color: @color-swatch4;
 }
 
 .widget.signupform fieldset input {
     height: 42px;
     width: 100%;
     margin-bottom: 10px;
-    background-color: @color-swatch1;
-    border: 1px solid darken(@color-swatch1,10%);
+    background-color: @color-swatch2;
+    border: 1px solid @color-swatch2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     padding-left: 10px;
 }
 
@@ -958,10 +993,18 @@ hr.line.align-right {
 
 .widget.contactform form {
     display: block;
-    padding: 2em;
+    padding: 30px;
     margin: 10px 0 20px;
-    background-color: @color-swatch4;
-    border: 0;
+    background-color: @color-swatch1;
+    border: 1px solid darken(@color-swatch1,10%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.bk-footer .widget.contactform form{
+  background-color: @color-swatch6;
+  border: none;
+  padding: 0;
 }
 .widget.contactform fieldset {
     border: none;
@@ -972,12 +1015,13 @@ hr.line.align-right {
     width: 100%;
     float: left;
     font-family:@font-swatch4-font-family;
-    font-size: @font-swatch3-font-size;
+    font-size:font-swatch4-font-size;
     font-weight:@font-swatch4-font-weight;
     line-height:@font-swatch4-line-height;
-    color:@color-swatch2;
+    color:@color-swatch3;
     letter-spacing: @font-swatch4-letter-spacing;
 }
+
 .widget.contactform fieldset input {
     height: 42px;
     width: 100%;
@@ -989,6 +1033,9 @@ hr.line.align-right {
     text-indent: 12px;
     margin-top: 6px;
     margin-bottom: 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     padding: 0;
 }
 
@@ -1006,7 +1053,11 @@ hr.line.align-right {
     margin-top: 6px;
     margin-bottom: 20px;
     resize: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
+
 .widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
   outline: none;
 }
@@ -1014,53 +1065,77 @@ hr.line.align-right {
 /* PLACEHOLDER CSS */
 
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    @color-swatch3;
+    color:    @color-swatch4;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:   @color-swatch3;
+    color:   @color-swatch4;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    @color-swatch3;
+    color:    @color-swatch4;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    @color-swatch3;
-}
-.bk-footer ::-webkit-input-placeholder{
-  color:    @color-swatch1;
-}
-.bk-footer :-moz-placeholder{
-  color:    @color-swatch1;
-}
-.bk-footer ::-moz-placeholder{
-  color:    @color-swatch1;
-}
-.bk-footer :-ms-input-placeholder{
-  color:    @color-swatch1;
+    color:    @color-swatch4;
 }
 
 .widget.contactform fieldset button.btn {
-  padding: 10px 30px;
-  border: 0;
-  font-family: @font-swatch7-font-family;
-  font-size: 1.2em;
+  padding: 5px 30px;
+  border: 1px solid transparent;
+  font-family: @font-swatch2-font-family;
+  font-size: .9em;
   font-weight:@font-swatch7-font-weight;
-  background-color: @color-swatch2;
-  color: @color-swatch4;
+  background-color: @font-swatch7-background-color;
+  color: @font-swatch7-color;
   text-decoration: none;
-  float: right;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 0px @color-swatch5;
+  -moz-box-shadow: 0 2px 0px @color-swatch5;
+  box-shadow: 0 2px 0px @color-swatch5;
 }
   
 .widget.contactform fieldset button.btn:hover {
-  background-color: @font-swatch7-background-color-hover;
+  background-color: @color-swatch1;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
-  border: 0;
-  color: @color-swatch1;
-
+  border: 1px solid @color-swatch4;
+  color: @color-swatch4;
+  -webkit-box-shadow: 0 0 0px @color-swatch5;
+  -moz-box-shadow: 0 0 0px @color-swatch5;
+  box-shadow: 0 0 0px @color-swatch5
 }
+
+.widget.contactform fieldset button.btn.justifyleft
+{
+    text-align: left;
+}
+
+.widget.contactform fieldset button.btn.justifycenter
+{
+    text-align: center;
+}
+
+.widget.contactform fieldset button.btn.justifyright
+{
+    text-align: right;
+}
+
+.widget.contactform fieldset button.btn.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.contactform fieldset button.btn.italic {
+    font-style: italic;
+}
+
+.widget.contactform fieldset button.btn.bold {
+    font-weight: bold;
+}
+
 
 /* ==================================
    SOCIAL BAR WIDGET / SOCIAL PROFILE
@@ -1076,12 +1151,10 @@ hr.line.align-right {
 .widget.profile .bk-profile-socialicons span {
     display: inline-block;
 }
-footer .widget.profile .bk-profile-socialicons span{
-  float: right;
-}
+
 .widget.socialicons span a,
 .widget.profile .bk-profile-socialicons span a {
-    background-color: @color-swatch5;
+    background-color: @font-swatch7-background-color;
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -1095,16 +1168,14 @@ footer .widget.profile .bk-profile-socialicons span{
     white-space: nowrap;
     overflow: hidden;
 }
-footer .widget.profile .bk-profile-socialicons span a{
-  background-color: @color-swatch5;
-}
+
 .widget.profile .bk-profile-socialicons span a {
     margin-right: 10px;
 }
 
 .widget.socialicons span a:hover,
 .widget.profile .bk-profile-socialicons span a:hover {
-    background-color: @font-swatch7-background-color-hover;
+    background-color: @font-swatch7-background-color-hover
 }
 
 /* SVG ICONS */
@@ -1196,7 +1267,7 @@ footer .widget.profile .bk-profile-socialicons span a{
       line-height: 0;
     }
     .content-wrapper {
-        background: @color-swatch4;
+        background: rgba(0,0,0,0.5);
     }
     .slideshow-widget {
         /* Arrows */
@@ -1272,7 +1343,7 @@ footer .widget.profile .bk-profile-socialicons span a{
             -moz-border-radius: 50%;
             border-radius: 50%;
             &.selected {
-                background-color: @color-swatch4;
+                background-color: @color-swatch3;
                 width: 11px;
                 height: 11px;
             }
@@ -1290,9 +1361,9 @@ footer .widget.profile .bk-profile-socialicons span a{
         .blog-post-item {
             padding: 30px;
             border: 1px solid darken(@color-swatch1,10%);
-            h2{
-            text-align: left;
-            }
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px; 
+            border-radius: 4px;
         }
         .blog-post-feature-image-wrap {  /* Blog post feature image */
             background-size: cover;
@@ -1360,8 +1431,11 @@ footer .widget.profile .bk-profile-socialicons span a{
         input {
             height: 42px;
             margin-bottom: 10px;
-            background-color: @color-swatch1;
-            border: 1px solid darken(@color-swatch1,10%);
+            background-color: @color-swatch2;
+            border: 1px solid @color-swatch2;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
             padding-left: 10px;
         }
         button {
@@ -1374,106 +1448,97 @@ footer .widget.profile .bk-profile-socialicons span a{
             letter-spacing: @font-swatch7-letter-spacing;
             padding: 5px 16px;
             margin: 0;
-            border: 0px solid transparent;
+            border: 1px solid transparent;
             text-decoration: none;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 2px 0px @color-swatch5;
+            -moz-box-shadow: 0 2px 0px @color-swatch5;
+            box-shadow: 0 2px 0px @color-swatch5;
             &:hover {
-                background-color: @color-swatch3;
+                background-color: @color-swatch1;
                 cursor: pointer;
-                border: 0px solid @color-swatch4;
-                color: @color-swatch1;
+                border: 1px solid @color-swatch4;
+                color: @color-swatch4;
+                -webkit-box-shadow: 0 0 0px @color-swatch5;
+                -moz-box-shadow: 0 0 0px @color-swatch5;
+                box-shadow: 0 0 0px @color-swatch5;
             }
         }
     }
 }
 
-/* menu food */
 
-.menu-item-price{  
-  color: @color-swatch4;
-  font-size: @font-swatch3-font-size;
-  p{
-    font-size: @font-swatch3-font-size;
-    color: @color-swatch4;
-  }
-}
+/* ===============================
+   MENU
+   =============================== */
 
-/* fixed content */
-
-.info-text1{
-  padding: 25px 15px 25px 95px;
-  background: image('/images/ico1.png') no-repeat 25px 50% @color-swatch5;
-  min-height: 100px;
-  color: @color-swatch1;
-  line-height: 1.2.em;
+.menu {
+    .menu-item-image-wrap {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 180px;
+        margin: 0.25em 0 0.75em;
+        background-position: center;
+        @media @mobile {
+           margin: 1em 0 0.5em;
+        }
+        img {
+           display: none;
+        }
+    }
+    .menu-items {
+        .menu-item {
+            padding: 30px;
+            border: 1px solid lighten(@color-swatch4,50%);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px; 
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+    }
+    .menu-subsection {
+        padding: 30px;
+        background-color:@color-swatch6;
+        border: 1px solid @color-swatch6;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px; 
+        border-radius: 4px;
+        .menu-item { 
+            background-color: @color-swatch6;
+        }
+    }
+    .standard-price{
+      font-size: 2em;
+    }
+    .menu-item-price{
+      padding: 1em 0;
+    }
 }
-.info-text2{
-  padding: 25px 15px 25px 95px;
-  background: image('/images/ico2.png') no-repeat 25px 50% @color-swatch6;
-  min-height: 100px;
-  color: @color-swatch1;
-  line-height: 1.2.em;
-}
-.info-text3{
-  padding: 25px 15px 25px 95px;
-  background: image('/images/ico3.png') no-repeat 25px 50% @color-swatch5;
-  min-height: 100px;
-  color: @color-swatch1;
-  line-height: 1.2.em;
-}
-.info-text1 p,.info-text2 p, .info-text3 p{
-  color: @color-swatch1;
+.menu-subsection-description{
+  padding-bottom: 1em;
 }
 
 /* ===============================
-   Media Q
+   IPAD WIDTH
    =============================== */
 
 @media only screen and (max-width: 768px) {
-  body{
-    background: none @color-swatch1;
-    filter: none;
-  }
-  .wrapper {
-      width: 94%;
-      margin: 0 3%;
-    }
-  .main{
-    padding: 0;
-  }
-  header.bk-header{
-    background-color: @color-swatch4;
-  }
-  .companyheader{
-    position: inherit;
-    top: inherit;
-    padding: 0;
-      .widget.logo{
-        margin: 0 1em 0 0;
-        img{
-          max-height: 80px;
-        }
-      }
-      .widget.companyname{
-        margin-top: 1.6em;
-      }
-    }
-    /* NAV */
+
+  /* NAV */
 
     .widget .extendednavigation a.pull {
-        top: -50px;
-        width: 26px;
-        height: 17px;
+        top: 20px;
     }
-    .widget .extendednavigation a.pull:after{
-      color: @color-swatch1;
-      background-color: @color-swatch1;
-      box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
-    }
+
     .widget.extendednavigation {
         width: 100%;
         padding: 0;
         margin: 0;
     }
+
+    /* NAV */
 
     .widget .extendednavigation ul {
         width: 100%;
@@ -1492,32 +1557,129 @@ footer .widget.profile .bk-profile-socialicons span a{
     }
 
     .widget.extendednavigation ul li:hover > ul {
-        display: block!important;
+      display: block!important;
         width: 100%;
         border-top: 1px solid darken(@color-swatch3,15%);
         margin: 0;
     }
 
+    /* GALLERY */
+
+    .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
+        font-size:bkscale(@font-swatch5-font-size,0.9);
+        line-height:bkscale(@font-swatch5-line-height,0.9);
+    }
+
+  /* FEATURE */
+
+    .widget.feature {
+      padding: 0;
+    }
+    .widget.feature .content .spare{
+      padding: 0;
+    }
+    .widget.feature h2{
+      font-size:@font-swatch3-font-size;
+      line-height:@font-swatch3-line-height;
+      margin-bottom: 0;
+      margin-top: 40px;
+    }
+    .widget.feature h3{display: none;}
+   .widget.feature .feature-bgimg {
+    height: 320px;
+   }
+
+  .widget.feature .content {
+    height: 320px;
+  }
+
+  .widget.gallery ul.gallery-widget li {
+      width: 50%;
+      padding-bottom: 50%;
+  }
+
+
 }
 
 @media only screen and (max-width : 650px) and (min-width : 481px) {
-
+   /* Tablet view: 2 tiles */
+   .widget.gallery li {
+      width: 50%;
+      /*padding-bottom: 50%;*/
+   }
 }
 
 @media only screen and (max-width : 1050px) and (min-width : 651px) {
-
+   /* Small desktop / ipad view: 3 tiles */
+   .widget.gallery li {
+      width: 33.3%;
+      /*padding-bottom: 33.3%;*/
+   }
 }
+
+/* ===============================
+   IPHONE WIDTH
+   =============================== */
 
 @media only screen and (max-width: 480px) {
 
+  /* UL ALIGN RIGHT */
+
+  .widget.extendednavigation ul.align-right li.folder {
+    background-position: 12px center;
+    padding-right: 0;
+  }
+
+  /* FEATURE */
+
+  .widget.feature {
+    padding: 0;
+  }
+
+  .widget.feature .feature-bgimg {
+    height: 220px; /* should be in media query*/
+   }
+
+  .widget.feature .content {
+    height: 220px;
+  }
+
+  .widget.feature .content .spare {
+    padding: 20px;
+  }
+
+  .widget.feature h2 {
+    margin-bottom: 20px;
+  }
+
+   /* GALLERY */
+
+  .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
+  max-height: 150px;
+  }
+
+  .widget.gallery p
+  {
+    padding: 10px;
+  }
+
+  /* Smartphone view: 1 tile */
+  .widget.gallery li {
+      width: 100%;
+      padding-bottom: 100%;
+  }
+  .sz-foot-right #f-address, .sz-foot-right #page-zones__template-widgets__profile-f-address{
+    margin-top: 25px;
+  }
+  .widget.logo, .widget.companyname{
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
   .wrapper {
-    width: 980px; /* 1140px - 10% for margins */
+    width: 960px; /* 1140px - 10% for margins */
     margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
 
